@@ -23,6 +23,8 @@ CREATE TABLE source_data_versions as(
     union
         (SELECT 'doitt_zipcodeboundaries' as schema_name, v from doitt_zipcodeboundaries limit 1)
     union
+        (SELECT 'doitt_buildingcentroids' as schema_name, v from pluto_input_numbldgs limit 1)
+    union
         (SELECT 'dcp_firecompanies' as schema_name, v from dcp_firecompanies limit 1)
     union
         (SELECT 'dcp_policeprecincts' as schema_name, v from dcp_policeprecincts limit 1)
